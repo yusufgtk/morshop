@@ -1,0 +1,37 @@
+@model IndexComponent
+
+@{
+    var DiscountProducts=Model.DiscountProducts;
+    var Top10Products=Model.Top10Products;
+}
+
+
+<div class="my-5">
+    <div class="mb-5">
+        <partial name="_Header"></partial>
+    </div>
+    
+    @*Products*@
+    <div class="mb-5"></div>
+        <h3 class="my-2" style="color: #512B81;">Mor İndirimler</h3>
+        <ul class="list-group list-group-horizontal position-relative overflow-auto w-100 bg-transparent">
+            @foreach(var p in DiscountProducts)
+            {
+                <li class="list-group-item">
+                    <partial name="_ProductCard" model="@p"></partial>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="mb-5"></div>
+        <h3 class="my-2" style="color: #512B81;">En çok satanlar</h3>
+        <ul class="list-group list-group-horizontal position-relative overflow-auto w-100 bg-transparent">
+            @foreach(var p in Top10Products)
+            {
+                <li class="list-group-item">
+                    <partial name="_ProductCard" model="@p"></partial>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

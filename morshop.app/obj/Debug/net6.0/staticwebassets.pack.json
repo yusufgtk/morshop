@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Css\\Style.css",
+      "PackagePath": "staticwebassets\\Css\\Style.css"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\03e75715-38b3-4d31-8c32-afb2155dbea8.jpeg",
+      "PackagePath": "staticwebassets\\Images\\03e75715-38b3-4d31-8c32-afb2155dbea8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\2674a81e-45ea-4ce8-8fda-8ec8437eb6cd.jpeg",
+      "PackagePath": "staticwebassets\\Images\\2674a81e-45ea-4ce8-8fda-8ec8437eb6cd.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\76ca22f5-1a78-4143-b848-aa91706d0efb.jpeg",
+      "PackagePath": "staticwebassets\\Images\\76ca22f5-1a78-4143-b848-aa91706d0efb.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\9298e969-406c-47a4-ad57-90b3571760eb.jpeg",
+      "PackagePath": "staticwebassets\\Images\\9298e969-406c-47a4-ad57-90b3571760eb.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\asus-rog-17.jpeg",
+      "PackagePath": "staticwebassets\\Images\\asus-rog-17.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\ba316ba0-10d1-4b97-922e-93d563f19a27.jpeg",
+      "PackagePath": "staticwebassets\\Images\\ba316ba0-10d1-4b97-922e-93d563f19a27.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\ce3e0637-c85f-4d72-b1d2-43f059a73cee.jpeg",
+      "PackagePath": "staticwebassets\\Images\\ce3e0637-c85f-4d72-b1d2-43f059a73cee.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\d5248392-4739-46fe-a521-9c00ff636667.jpeg",
+      "PackagePath": "staticwebassets\\Images\\d5248392-4739-46fe-a521-9c00ff636667.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\f665e295-8e7b-4789-b6ad-bfbaeaf927c8.jpeg",
+      "PackagePath": "staticwebassets\\Images\\f665e295-8e7b-4789-b6ad-bfbaeaf927c8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\ipad-air-5-nesil.jpeg",
+      "PackagePath": "staticwebassets\\Images\\ipad-air-5-nesil.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\iphone-12.jpeg",
+      "PackagePath": "staticwebassets\\Images\\iphone-12.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\iphone-13-pro-max.jpeg",
+      "PackagePath": "staticwebassets\\Images\\iphone-13-pro-max.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\iphone-14-pro-max.jpeg",
+      "PackagePath": "staticwebassets\\Images\\iphone-14-pro-max.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\iphone-14.jpeg",
+      "PackagePath": "staticwebassets\\Images\\iphone-14.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\macbook-pro.jpeg",
+      "PackagePath": "staticwebassets\\Images\\macbook-pro.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\monster-abra-a5.jpeg",
+      "PackagePath": "staticwebassets\\Images\\monster-abra-a5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\samsung-s23-ultra.jpeg",
+      "PackagePath": "staticwebassets\\Images\\samsung-s23-ultra.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\samsung-tab-s8-ultra.jpeg",
+      "PackagePath": "staticwebassets\\Images\\samsung-tab-s8-ultra.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\slide1.jpeg",
+      "PackagePath": "staticwebassets\\Images\\slide1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\slide2.jpeg",
+      "PackagePath": "staticwebassets\\Images\\slide2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\Images\\slide3.jpeg",
+      "PackagePath": "staticwebassets\\Images\\slide3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\yusuf\\OneDrive\\Masaüstü\\morshop\\morshop.app\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.morshop.app.props",
+      "PackagePath": "build\\morshop.app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.morshop.app.props",
+      "PackagePath": "buildMultiTargeting\\morshop.app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.morshop.app.props",
+      "PackagePath": "buildTransitive\\morshop.app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.morshop.app.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

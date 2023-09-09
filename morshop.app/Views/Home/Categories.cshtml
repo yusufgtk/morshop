@@ -1,0 +1,18 @@
+@model List<Category>
+
+<div class="my-5">
+    <div class="row"> 
+        @foreach(var c in Model)
+        {   
+            <div class="col-sm-6 col-md-4 col-lg-3 d-flex align-items-center justify-content-center">
+                <a asp-controller="Product" asp-action="List" asp-route-categoryUrl="@c.Url" class="card mb-3 link-underline link-underline-opacity-0 text-white" style="max-width: 18rem; background-color: #512B81;">
+                    <div class="card-header">@c.Name</div>
+                    <div class="card-body">
+                        @* <h5 class="card-title">Telefon</h5> *@
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nulla itaque obcaecati eos vitae quis?</p>
+                    </div>
+                </a>
+            </div>
+        } 
+    </div>
+</div>

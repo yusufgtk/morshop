@@ -1,0 +1,42 @@
+@model ListComponent
+@{
+    var Products=Model.Products;
+    var Categories=Model.Categories;
+
+}
+
+<div id="List" class="my-5">
+    <div class="position-fixed">
+        <a href="#body" class="fixed-bottom text-center" style="background-color: #512b81; width:125px;"><i class="fa-solid fa-up-long pe-2" style="color: #fff;"></i><span class="text-white">Yukarı çık</span></a>
+    </div>
+    <div class="row">
+        @*categories*@
+        <div class="col-3 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <ul class="list-group">
+                @foreach(var c in Categories)
+                {
+                    <a href="/product/list/@c.Url" class="list-group-item fw-5">@c.Name</a>
+                }
+            </ul>
+        </div>
+        @*products*@
+        <div class="col-9">
+            <div class="row">
+                @if(Products.Count()<=0)
+                {
+                    <partial name="_ALert"></partial>
+                }
+                else
+                {
+                    @foreach(var p in Products)
+                    {
+                        <div class="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-center justify-content-center">
+                            <partial name="_ProductCard" model="@p"></partial>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+</div>

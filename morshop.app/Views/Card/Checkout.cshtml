@@ -1,0 +1,121 @@
+@model OrderModel
+
+<div class="my-5" id="Checkout">
+    <div class="row">
+        <div class="col-md-8 col-lg-8 col-sm-12">
+            <h4 style="color: #512b81;">Adres Bilgisi</h4>
+            <form asp-controller="Card" asp-action="Checkout" method="post">
+                <input type="text" hidden name="cardId" value="132"> 
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Ad" asp-for="FirstName">
+                    <label asp-for="FirstName">Ad</label>
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Soyad" asp-for="LastName">
+                    <label asp-for="LastName">Soyad</label>
+                    <span asp-validation-for="LastName"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Adres" asp-for="Address">
+                    <label asp-for="Address">Adres</label>
+                    <span asp-validation-for="Address"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Şehir" asp-for="City">
+                    <label asp-for="City">Şehir</label>
+                    <span asp-validation-for="City"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Telefon" asp-for="Phone">
+                    <label asp-for="Phone">Telefon</label>
+                    <span asp-validation-for="Phone"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-md-offset-4 mb-3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <h3 class="text-center">Cart Bilgileri</h3>
+                                        <img class="img-responsive cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label>Kart Numarası</label>
+                                                <div class="input-group mb-3">
+                                                    <input asp-for="CardNumber" class="form-control" placeholder="Valid Card Number" />
+                                                    <span asp-validation-for="CardNumber"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-7 col-md-7">
+                                            <div class="form-group mb-3">
+                                                <label asp-for="ExpirationMonth"><span class="hidden-xs">Son Kullanma Tarihi</label>
+                                                <div class="input-group mb-3">
+                                                    <input asp-for="ExpirationMonth"class="form-control" placeholder="MM" min="1" max="12">
+                                                    <span class="input-group-text px-1">/</span>
+                                                    <input asp-for="ExpirationYears"class="form-control" placeholder="YY" min="2022" max="2099">
+                                                </div>
+                                                <span asp-validation-for="ExpirationMonth"></span>
+                                                <span asp-validation-for="ExpirationYears"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-5 col-md-5 pull-right">
+                                            <div class="form-group mb-3">
+                                                <label asp-for="Cvc">CVC</label>
+                                                <input asp-for="Cvc" class="form-control" placeholder="CVC" />
+                                                <span asp-validation-for="Cvc"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 mb-3">
+                                            <div class="form-group">
+                                                <label asp-for="FullName" >Kart Sahibinin Adı</label>
+                                                <input asp-for="FullName" class="form-control" placeholder="Card Owner Names" />
+                                                <span asp-validation-for="FullName"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn text-white" style="background-color: #512b81;">Öde</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <h4 style="color: #512b81;">Ödeme Bilgileri</h4>
+            <ul class="list-group mb-3">
+                @if (Model != null && Model.CardModel != null && Model.CardModel.CardItems != null)
+                {
+                    @foreach(var item in Model.CardModel.CardItems)
+                    {
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>
+                                <h6>@item.Name</h6>
+                            </div>
+                            <span class="text-muted">@item.Price.ToString("c") TL</span>
+                        </li>
+                    }
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span class="text-muted">Toplam (TL)</span>
+                        <strong>@(Model.CardModel.TotalPrice().ToString("c")) TL</strong>
+                    </li>
+                } else {
+                    // Eğer herhangi bir nesne null ise, alternatif bir işlem yapabilirsiniz veya hata mesajını görüntüleyebilirsiniz.
+                    <p>Hata: Model.CardModel.CardItems null veya boş bir referansa sahip.</p>
+                }
+
+            </ul>
+        </div>
+    </div>
+</div>

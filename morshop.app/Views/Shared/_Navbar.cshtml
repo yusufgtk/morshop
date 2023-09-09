@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #512B81;">
+    <div class="container">
+        <a class="navbar-brand text-light" asp-controller="Home" asp-action="Index"><span class="fs-6">Mor</span><span class="fs-4">Shop</span></a>
+        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-light" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" asp-controller="Home" asp-action="Categories">Kategoriler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/product/list">Ürünler</a>
+                </li>
+                @if(User.Identity.IsAuthenticated&&User.IsInRole("admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Admin" asp-action="ProductList">Admin Ürünler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Admin" asp-action="CategoryList">Admin Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Admin" asp-action="UserList">Kullanıcılar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Admin" asp-action="RoleList">Roller</a>
+                    </li>
+                }
+            </ul>
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Card" asp-action="Orders">Siparişler</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a asp-controller="Card" asp-action="Index" class="nav-link btn bg-white"><i class="fa-solid fa-basket-shopping" style="color: #512b81;"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="/" class="nav-link btn bg-white fw-semibold" style="color: #512B81;">@User.Identity.Name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Account" asp-action="Logout" alt="Çıkış" class=" btn bg-white"><i class="fa-solid fa-right-from-bracket" style="color: #512b81;"></i></a>
+                    </li>
+                }else{
+                    <li class="nav-item mx-2">
+                        <a asp-controller="Account" asp-action="Login" class=" btn bg-white"><i class="fa-solid fa-user" style="color: #512b81;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Account" asp-action="Register" class=" btn bg-white"><i class="fa-solid fa-user-plus" style="color: #512b81;"></i></a>
+                    </li>
+                }
+            </ul>
+            <div class="ms-2">
+                <form action="/search" class="d-flex" role="search">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Ürün adı gir..." aria-label="Ürün adı gir...">
+                    <button asp-controller="Product" asp-action="Search" class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            
+            
+        </div>
+    </div>
+</nav>

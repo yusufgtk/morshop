@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\morshop.webapi.props" />
+</Project>

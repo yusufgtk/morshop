@@ -1,0 +1,12 @@
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\morshop.entity.deps.json
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\morshop.entity.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\morshop.entity.pdb
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.csproj.AssemblyReference.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.AssemblyInfoInputs.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.AssemblyInfo.cs
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.csproj.CoreCompileInputs.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\refint\morshop.entity.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\morshop.entity.pdb
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\obj\Debug\net6.0\ref\morshop.entity.dll

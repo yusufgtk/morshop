@@ -1,0 +1,66 @@
+@model AdminProductListComponent
+@{
+    var Products=Model.Products;
+    var Categories=Model.Categories;
+    var Message=Model.Message;
+}
+
+<div id="ProductList" class="my-5">
+
+    @if(Message!=null)
+    {
+        <div class="alert alert-info" role="alert">
+            @Message
+        </div>
+    }
+
+    <div class="d-flex justify-content-between">
+        <h3 style="color: #512B81;" class="fs-3 mb-3 mt-3">Ürün Listesi</h3>
+        <a asp-controller="Admin" asp-action="AddProduct" class="btn mb-3 mt-3">Ürün Ekle <span class="fw-bolder">+</span></a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" class="text-white">Id</th>
+                <th scope="col" class="text-white">Resim</th>
+                <th scope="col" class="text-white">Ürün Adı</th>
+                <th scope="col" class="text-white">Kategori</th>
+                <th scope="col" class="text-white">Fiyat</th>
+                <th scope="col" class="text-white">Onaylı mı?</th>
+                <th scope="col" class="text-white">Güncelle</th>
+                <th scope="col" class="text-white">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var p in Products)
+            {
+                <tr>
+                    <th scope="row">@p.Id</th>
+                    <td style="width: 150px; height: 175px;">
+                        <img src="~/Images/@p.ImageUrl" alt="Resim" style="width: 135px; height: 155px;">
+                    </td>
+                    <td>@p.Name</td>
+                    @foreach(var c in Categories)
+                        {
+                            @if(p.CategoryId==c.Id)
+                            {
+                                <td>@c.Name</td>
+                            }
+                        }
+                    <td>@p.CurrentPrice TL</td>
+                    <td>@p.IsApproved</td>
+                    <td>
+                        <a href="/admin/editproduct/@p.Id" class="btn btn-success">Güncelle</a>
+                    </td>
+                    <td>
+                        <form asp-controller="Admin" asp-action="DeleteProduct" method="post">
+                            <input type="number" hidden name="Id" value="@p.Id">
+                            <button type="submit" class="btn btn-danger">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=josefin+Sans:wght@400;500;600;700&display=swap');
+.active{
+    background-color: white;
+    color: #512b81;
+}
+
+#ProductCard{
+    width:14rem;
+    height:25rem;
+    border:2px solid #512B81;
+    background-color: white;
+    transition: all .5s;
+}
+#ProductCard:hover{
+    background-color: #9F91CC;
+}
+#ProductCard div a{
+    background-color: #512B81;
+    color: white;
+}
+#ProductCard div a:hover{
+    background-color: white;
+    color: #512B81;
+    border: 1px solid #512B81;
+}
+#ProductDetails
+{
+    width: 100%;
+}
+#ProductDetails div div form button
+{
+    background-color: #512B81;
+    color: white;
+}
+#ProductDetails div div form button:hover
+{
+    background-color: white;
+    color: #512B81;
+    border: 1px solid #512B81;
+}
+
+
+#List div div ul a
+{
+    background-color: #512B81;
+    color:white;
+    transition: all .3s;
+
+}
+#List div div ul a:hover
+{
+    background-color: white;
+    color: #512B81;
+}
+
+#ProductList table thead tr th{
+    background-color: #512B81;
+    color: #ffffff;
+}
+#ProductList table tbody tr{
+    background-color: #512B81;
+}
+#ProductList table tbody tr:hover{
+    background-color: #5a3388;
+}
+#ProductList table tbody tr th{
+    background-color: transparent;
+    color: #ffffff;
+}
+#ProductList table tbody tr td{
+    background-color: transparent;
+    color: #ffffff;
+}
+#ProductList div a{
+    background-color: #512B81;
+    color: #ffffff;
+    transition: all .3ms;
+}
+#ProductList div a:hover{
+    background-color: #7348a7;
+    color: #ffffff;
+}

@@ -1,0 +1,40 @@
+@model List<OrderListModel>
+
+<div id="ProductList" class="my-5">
+
+
+    <div class="d-flex justify-content-between">
+        <h3 style="color: #512B81;" class="fs-3 mb-3 mt-3">Sipariş Listesi</h3>
+    </div>
+    <div>
+        @foreach(var order in Model)
+        {
+            <div class="card text-center mb-5">
+                <div class="card-header text-white" style="background-color: #512B81;">
+                    Siparişiniz için teşekkürler @order.FirstName @order.LastName
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        @foreach(var orderItem in order.OrderItemsModel)
+                        {
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card" style="width: 10rem;">
+                                    <img src="~/Images/@orderItem.ImageUrl" class="card-img-top text-white">
+                                    <div class="card-body" style="background-color: #512B81;">
+                                        <h6 class="card-title text-white">@orderItem.Name</h6>
+                                        <p class="card-text text-white">Fiyat : @orderItem.Price</p>
+                                        <p class="card-text text-white">Adet : @orderItem.Quantity</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="card-footer text-body-secondary text-white" style="background-color: #512B81;">
+                    <p class="text-white m-0">Sipariş verilen tarih : @order.OrderDate</p>
+                    <strong class="text-white m-0">Siparişin Toplam Fiyatı : @order.TotalPrice().ToString("c") TL</strong>
+                </div>
+            </div>
+        }
+    </div> 
+</div>

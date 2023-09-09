@@ -1,0 +1,17 @@
+c:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.repository.deps.json
+c:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.repository.runtimeconfig.json
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.repository.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.repository.pdb
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.entity.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\bin\Debug\net6.0\morshop.entity.pdb
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.csproj.AssemblyReference.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.AssemblyInfoInputs.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.AssemblyInfo.cs
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.csproj.CoreCompileInputs.cache
+c:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.csproj.CopyComplete
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\refint\morshop.repository.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.pdb
+c:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\morshop.repository.genruntimeconfig.cache
+c:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.repository\obj\Debug\net6.0\ref\morshop.repository.dll

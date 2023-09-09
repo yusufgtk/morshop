@@ -1,0 +1,63 @@
+@model List<AppUser>
+
+@section Css{
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+}
+@section Js{
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+}
+
+<div id="UserList" class="my-5">
+    @if(Model.ToList().Count()<=0)
+    {
+        <div class="alert alert-info" role="alert">
+            Kullanıcı bulunmamaktadır!
+        </div>
+    }
+
+    <div class="d-flex justify-content-between">
+        <h3 style="color: #512B81;" class="fs-3 mb-3 mt-3">Kullanıcı Listesi</h3>
+        <a asp-controller="Admin" asp-action="CreateUser" class="btn mb-3 mt-3 btn-primary">Kullanıcı Ekle<span class="fw-bolder">+</span></a>
+    </div>
+
+    <table class="table" id="myTable" style="background-color: #512B81;">
+        <thead>
+            <tr style="background-color: #512B81;">
+                <th scope="col" class="text-white" style="width: 150px; background-color: #512B81;">Id</th>
+                <th scope="col" class="text-white" style="background-color: #512B81;">Kullanıcı Adı</th>
+                <th scope="col" class="text-white" style="width: 100px; background-color: #512B81;">Düzenle</th>
+                <th scope="col" class="text-white" style="width: 100px; background-color: #512B81;">Rol Ata</th>
+                <th scope="col" class="text-white" style="width: 75px; background-color: #512B81;">Banla</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in Model)
+            {
+                <tr class="@(user.EmailConfirmed?"bg-success":"bg-warning")">
+                    <th style="background-color: transparent;" scope="row">@user.Id</th>
+                    <td style="background-color: transparent;" >@user.UserName</td>
+
+                    <td style="background-color: transparent;">
+                        <a href="/admin/useredit/@user.Id" class="btn text-white" style="background-color: #512B81;">Düzenle</a>
+                    </td>
+                    <td style="background-color: transparent;">
+                        <a href="/admin/userroleedit/@user.Id" class="btn btn-primary">Rol Ata</a>
+                    </td>
+                    <td style="background-color: transparent;" >
+                        <form asp-controller="Admin" asp-action="UserBan" method="post">
+                            <input type="number" hidden name="Id" value="@user.Id">
+                            <button type="submit" class="btn btn-danger">Banla</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

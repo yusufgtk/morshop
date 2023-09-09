@@ -1,0 +1,14 @@
+@model RoleEditModel
+<div class="my-5 p-5 rounded-5" style="background-color: #512B81;">
+    <h3 class="text-center text-white">Rol Düzenle</h3>
+    <form action="/admin/roleedit" method="post">
+        <div asp-validation-summary="All" class="text-white"></div>
+        <input type="hidden"  asp-for="Id" value="@Model.Id">
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="Name">Rol Adı</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-white"></span>
+        </div>
+        <button type="submit" class="btn fw-semibold me-2" style="background-color: #fff; color:#512B81;">Giriş Yap</button>
+    </form>
+</div>

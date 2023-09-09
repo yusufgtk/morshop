@@ -1,0 +1,26 @@
+@model Product
+
+<div id="ProductCard" class="card p-1" style="">
+    <img src="~/Images/@Model.ImageUrl" class="card-img-top" style="max-width: 14rem; max-height: 15rem; min-height: 12rem;" alt="...">
+    <div class="card-body">
+        <h5 class="card-title fs-5">@Model.Name</h5>
+        <p class="card-text my-0 fs-6">@Model.Description.Substring(0,20)...</p>
+        <div class="d-block">
+            <div>
+                @if(Model.PreviousPrice-Model.CurrentPrice<=0)
+                {
+                    <span class="text-success fw-medium fs-5" >@Model.CurrentPrice TL</span>
+                }
+                else
+                {
+                    <del class="fs-6">@Model.PreviousPrice TL</del>
+                    <br>
+                    <span class="text-danger fw-medium fs-5">@Model.CurrentPrice TL</span>
+                }
+            </div>
+            <div class="d-block">
+                <a href="/product/details/@Model.Url" class="btn fw-medium float-end">İncele</a>
+            </div>
+        </div>
+    </div>
+</div>

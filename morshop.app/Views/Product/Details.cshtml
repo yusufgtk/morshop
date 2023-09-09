@@ -1,0 +1,44 @@
+@model Product
+
+<div id="ProductDetails" class="card mb-3 my-5 p-3" style="max-width: 100%; border-color: #512B81;">
+    <div class="row g-0">
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <img src="~/Images/@Model.ImageUrl" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8 col-sm-12 col-lg-4 border-start ps-5" style="border-color:#512B81;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text"></p>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text"><small class="text-body-secondary">Satış sayısı : @Model.NumberOfSales</small></p>
+                @if(Model.PreviousPrice-Model.CurrentPrice<0)
+                {
+                    <span class="text-success fw-medium fs-5" >@Model.CurrentPrice TL</span>
+                }
+                else
+                {
+                    <del class="fs-6">@Model.PreviousPrice TL</del>
+                    <br>
+                    <span class="text-danger fw-medium fs-5">@Model.CurrentPrice TL</span>
+                }
+            </div>
+            <div>
+                <form asp-controller="Card" asp-action="AddCard">
+                    <input type="hidden" name="ProductId" value="@Model.Id">
+                    <div class="input-group my-3">
+                        <label for="count" class="input-group-text">Adet</label>
+                        <input type="number" name=Quantity id="count" class="form-control" style="max-width: 100px;" min="1" step="1" max="50"/>
+                    </div>
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <button type="submit" class="btn">Sepete Ekle</button>
+                    }
+                </form>
+            </div>
+            @if(!User.Identity.IsAuthenticated)
+            {
+                <div class="alert alert-warning">Sepete eklemek için giriş yap!</div>
+            }
+        </div>
+    </div>
+</div>

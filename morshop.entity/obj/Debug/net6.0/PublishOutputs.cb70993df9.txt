@@ -1,0 +1,3 @@
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\publish\morshop.entity.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\publish\morshop.entity.deps.json
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\morshop.entity\bin\Debug\net6.0\publish\morshop.entity.pdb

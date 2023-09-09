@@ -1,0 +1,78 @@
+@model CardModel
+
+<div class="my-5 pb-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xlg-8">
+            <div class="border-3 mb-5">
+                @if(Model.CardItems.Count()<=0)
+                {
+                    <div class="alert alert-primary my-1">Sepetinizde Ürün bulunmamaktadır!</div>
+                }
+                else
+                {
+                    <h1>Ürünler</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ürün Id</th>
+                                <th scope="col">Resim</th>
+                                <th scope="col">Ürün Adı</th>
+                                <th scope="col">Fiyat</th>
+                                <th scope="col">Adet</th>
+                                <th scope="col">Toplam</th>
+                                <th scope="col">Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var item in Model.CardItems)
+                            {
+                                <tr>
+                                    <th scope="row">@item.ProductId</th>
+                                    <td style="width: 150px; height: 175px;">
+                                        <img src="~/Images/@item.ImageUrl" alt="Resim" style="width: 135px; height: 155px;">
+                                    </td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Price TL</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@(item.Quantity*item.Price) TL</td>
+                                    <td>
+                                        <form asp-controller="Card" asp-action="DeleteCardItem" method="POST">
+                                            <input type="hidden" name="ProductId" value="@item.ProductId">
+                                            <button type="submit" class="btn btn-danger">Sil</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xlg-4">
+            <div class="border-3 mb-5">
+                <h1 scope="col">Toplam Fiyat</h1>
+                <table class="table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Sepet Tutarı</th>
+                            <td>@Model.TotalPrice().ToString("c") TL</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kargo Ücreti</th>
+                            <td>Ücretsiz <del>19.90 TL</del></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ödenecek Tutar</th>
+                            <td>@(Model.TotalPrice().ToString("c")) TL</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <a asp-controller="Card" asp-action="Checkout" class="btn" style="background-color: #512b81; color:#fff">Ödemeyi Tamamla</a>
+                
+            </div>
+        </div>
+    </div>
+</div>

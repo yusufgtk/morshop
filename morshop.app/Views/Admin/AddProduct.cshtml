@@ -1,0 +1,39 @@
+@model ProductModel
+<div class="my-5 p-5 rounded-5" style="background-color: #512B81;">
+    <form action="/admin/addproduct" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-white"></div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="Name ">Ürün Adı</label>
+            <input asp-for="Name" type="text" class="form-control">
+            <span asp-validation-for="Name" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="Description">Ürün Açıklaması</label>
+            <div class="form-floating">
+                <textarea class="form-control" asp-for="Description" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
+            </div>
+            <span asp-validation-for="Description" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="CurrentPrice">Ürün Fiyatı</label>
+            <input asp-for="CurrentPrice" class="form-control">
+            <span asp-validation-for="CurrentPrice" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 me-2 text-white" asp-for="ImageUrl">Ürün Resmini Seçiniz</label>
+            <input style="background-color: #fff; color:#512B81" class="p-2" type="file" name="file">
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white">Kategori</label>
+            <select class="form-select" aria-label="Default select example" asp-for="CategoryId">
+                @foreach(var c in ViewBag.Categories)
+                {
+                    <option value="@c.Id">@c.Name</option>
+                }
+                
+            </select>
+            <span asp-validation-for="CategoryId" class="text-white"></span>
+        </div>
+        <button type="submit" class="btn fw-semibold" style="background-color: #fff; color:#512B81;">Ekle</button>
+    </form>
+</div>

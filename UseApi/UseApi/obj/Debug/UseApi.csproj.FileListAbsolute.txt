@@ -1,0 +1,14 @@
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\bin\Debug\UseApi.exe.config
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\bin\Debug\UseApi.exe
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\bin\Debug\UseApi.pdb
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.csproj.AssemblyReference.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.csproj.SuggestedBindingRedirects.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.Form1.resources
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.Properties.Resources.resources
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.csproj.GenerateResource.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.csproj.CoreCompileInputs.cache
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.csproj.CopyComplete
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.exe
+C:\Users\yusuf\OneDrive\Masaüstü\morshop\UseApi\UseApi\obj\Debug\UseApi.pdb

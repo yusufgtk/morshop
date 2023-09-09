@@ -1,0 +1,39 @@
+@model RegisterModel
+<div class="my-5 p-5 rounded-5" style="background-color: #512B81;">
+    <h3 class="text-center text-white">Kayıt Ol</h3>
+    <form action="/account/register" method="post">
+        <div asp-validation-summary="All" class="text-white"></div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="FirstName ">Ad</label>
+            <input asp-for="FirstName" class="form-control">
+            <span asp-validation-for="FirstName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="LastName ">Soyad</label>
+            <input asp-for="LastName" class="form-control">
+            <span asp-validation-for="LastName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="UserName ">Kullanıcı Adı</label>
+            <input asp-for="UserName" class="form-control">
+            <span asp-validation-for="UserName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="Password ">Şifre</label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="RePassword ">Şifre Tekrar</label>
+            <input asp-for="RePassword" class="form-control">
+            <span asp-validation-for="RePassword" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="Email ">Email</label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-white"></span>
+        </div>
+        <button type="submit" class="btn fw-semibold" style="background-color: #fff; color:#512B81;">Kayıt Ol</button>
+    </form>
+</div>
+

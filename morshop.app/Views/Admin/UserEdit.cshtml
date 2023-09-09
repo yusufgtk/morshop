@@ -1,0 +1,40 @@
+@model UserModel
+<div class="my-5 p-5 rounded-5" style="background-color: #512B81;">
+    <h2 class="mb-3 text-center h3" style="color: #fff">Kullanıcı Bilgileri</h2>
+    <form action="/admin/useredit" method="post">
+        <span asp-validation-Summury="All"></span>
+        <input type="hidden" asp-for="Id" value="@Model.Id">
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="FirstName">Ad</label>
+            <input asp-for="FirstName" type="text" class="form-control">
+            <span asp-validation-for="FirstName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="LastName">Soyad</label>
+            <input asp-for="LastName" type="text" class="form-control">
+            <span asp-validation-for="LastName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="UserName">Kullanıcı Adı</label>
+            <input asp-for="UserName" type="text" class="form-control">
+            <span asp-validation-for="UserName" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="EmailAddress">Email Adresi</label>
+            <input asp-for="EmailAddress" type="text" class="form-control">
+            <span asp-validation-for="EmailAddress" class="text-white"></span>
+        </div>
+        <div class="form-group mb-4">
+            <label class="mb-1 text-white" asp-for="IsEmailConfirmed">Email Adresi Onaylı mı?</label>
+            <input asp-for="IsEmailConfirmed" type="checkbox">
+        </div>
+        <div class="form-group mb-4">
+            <h4 class="mb-1 h4 text-white d-inline" >Kullanıcnın sahip olduğu roller :</h4>
+            @foreach(var role in @ViewBag.UserRoles)
+            {
+                <p class="mx-1 my-2 p-1 fs-4 d-inline" style="background-color: #fff; color:#512b81;">@role</p>
+            }
+        </div>
+        <button type="submit" class="btn fw-semibold" style="background-color: #fff; color:#512B81;">Güncelle</button>
+    </form>
+</div>

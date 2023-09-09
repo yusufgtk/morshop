@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EHWh9rhgoBizrRf7ud1j3I+ODMUm/qgubwDOiOPzXgk=",
+  "Source": "morshop.webapi",
+  "BasePath": "_content/morshop.webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
